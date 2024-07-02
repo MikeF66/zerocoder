@@ -1,0 +1,26 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    <title>{{page}}</title>
+{% endblock %}
+
+{% block content %}
+    <h1>Добро пожаловать на новостную страницу сайта {{caption}}!</h1>
+
+    <h3>НОВОСТИ:</h3>
+    {% if news %}
+        {% for new in news %}
+            <div class="card">
+                <h5 class="text-center">{{ new.title }}</h5>
+                <p>{{ new.short_description}}</p>
+                <div class=" col d-flex justify-content-between"
+                    <span class="fw-light">Автор: {{new.username}}</span>
+                    <span class="fw-light">Дата:{{new.pub_date}}</span>
+                </div>
+                <h6>{{ new.text|linebreaksbr}}</h6>
+            </div>
+        {% endfor %}
+    {% else %}
+       <h4>Нет новостей</h4>
+    {% endif %}
+{% endblock %}

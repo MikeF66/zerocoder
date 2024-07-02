@@ -1,0 +1,44 @@
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="footer-section about">
+                    <h3>О нас</h3>
+                    <p>{{caption}} — это сообщество разработчиков и любителей кошек. Мы делимся знаниями о Django и
+                       полезными советами по уходу за питомцами.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="footer-section links">
+                    <h3>Полезные ссылки</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="{% url 'home' %}" class="text-white">{{ nav_data.home }}</a></li>
+                                <li><a href="{% url 'data' %}" class="text-white">{{ nav_data.data }}</a></li>
+                                <li><a href="{% url 'test' %}" class="text-white">{{ nav_data.test }}</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="{% url 'fourth' %}" class="text-white">{{ nav_data.fourth }}</a></li>
+                                <li><a href="{% url 'news_home' %}" class="text-white">{{ nav_data.news }}</a></li>
+                                <li><a href="{% url 'add_news' %}" class="text-white">{{ nav_data.add_news }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-section contact">
+                    <h3>Контакты</h3>
+                    <p>Email: info@catdjango.com</p>
+                    <p>Телефон: +7 (912) 345-67-89</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center mt-4">
+            <p>&copy; 2024 {{caption}}. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
